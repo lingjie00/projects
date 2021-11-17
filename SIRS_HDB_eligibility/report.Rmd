@@ -1,0 +1,141 @@
+---
+title: "SIRS_eligibility_report"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+## Context
+In view of the COVID-19 situation, Singapore government introduced SELF-EMPLOYED PERSON INCOME RELIEF SCHEME (SIRS) to help self-employed Singaporeans.
+More context: https://www.income.com.sg/blog/sirs-covid-19-support
+
+In order for one to be qulified for the scheme, one has to fulfill a list of requirements.
+full eligibility = https://www.ntuc.com.sg/sirs/eligibility/
+
+I was asked by a friend regarding one of the eligibility requirement regarding property annual value.
+The criteria of interest is: I live in a property with an annual value of $21,000 or less
+
+Since anual value is computed by rental per month X 12 months, we are looking at flat with monthly rental <= $1750
+I went around to look for Singapore's rental data.
+Calculation for Annual Value: https://www.iras.gov.sg/IRASHome/Property/Property-owners/Learning-the-basics/About-Annual-Value/
+
+I used the median rent by town and flat type dataset in Singapore government's database.
+Data source: https://data.gov.sg/dataset/median-rent-by-town-and-flat-type
+
+I have uploaded my codes and dataset here: https://github.com/lingjie00/SIRS_HDB_eligibility
+
+## Data Overview
+The dataset contains 4 columns:
+
+1. Singapore rental date
+
+2. Town of the rental flat
+
+3. The kind of flat
+
+4. The median rent
+
+```{r echo = FALSE, message = FALSE}
+source("code.R")
+library(tidyverse)
+library(knitr)
+str(rental)
+```
+
+The rental date ranged from 2005Q2 to 2020Q1
+```{r}
+unique(rental$quarter)
+```
+
+The towns includes
+```{r}
+unique(rental$town)
+```
+
+The kind of flats are
+```{r}
+unique(rental$flat_type)
+```
+
+The average median rent breakdown by town are (exclude NA)
+```{r message=FALSE}
+rental_table_town = rental %>% group_by(town) %>% 
+  summarize(avg_median_rent = round(mean(median_rent, na.rm=TRUE),digits=2))
+kable(rental_table_town)
+```
+
+The average median rent breakdown by flat type are (exclude NA)
+```{r}
+rental_table_flat = rental %>% group_by(flat_type) %>% 
+  summarize(avg_median_rent = round(mean(median_rent, na.rm=TRUE),digits=2))
+kable(rental_table_flat)
+```
+
+## Missing Data
+I have selected only 2020Q1 data to reflect the latest rent price.
+
+A first look at the data discover that 75 rows have missing data with ~66% in the smallest flat types and 20% in the largest flat type.
+I suspect that since not all town has 1, 2 room flats or executive flats, the missing values could be due to the non-existance of flat type. But this require a further analysis.
+```{r}
+missing_entries = rental_2020 %>% filter(is.na(rental_2020$median_rent)) 
+missing_entries %>% group_by(flat_type) %>% 
+  summarize(n = n(), percent = round(n()/nrow(missing_entries)*100,digits=2))
+```
+
+Here is a detail breakdown of the 75 missing entries in 2020Q1
+```{r}
+kable(missing_price)
+```
+
+I decided to fix the missing values by including the past 3 years of rental data, if available.
+As a result, I included the following 8 past year rental data.
+```{r}
+missing_price_fixed_recent
+```
+
+Now, we have around 57% of the total possible rental data in Singapore
+```{r}
+non_empty_rows = rental_2020_fixed_na %>% filter(!is.na(median_rent))
+cat(round(nrow(non_empty_rows)/nrow(rental_2020) * 100,digits=2),"%")
+```
+
+## Analysis
+Since we are interested in knowning who is eligible for the SIRS, that is flat with annual value <= \$21000, we will focus on flats with monthly rent of <= \$1750
+
+We first take a look at the difference in median rent across flat type.
+It is clear from the graph that most of the eligible flat types are 3 room and 2 room flats.
+The anomalies include one 4 room flat and a percentage of 3 room flats.
+```{r}
+plot_price_by_flat_type
+```
+
+Now we will look at the median rent breakdown by town.
+We see that except for 4 room flat in Woodlands, all other 4 room flats are not eligible for SIRS.
+And about 1/3 of the 3 room flats are not eligible for SIRS as well.
+```{r}
+plot_price_by_town
+```
+
+When we take a closer look at the flats eligible for SIRS, our previous observation is even clearer
+```{r}
+plot_eligible_town
+```
+
+The total town and flat type combination eligible for SIRS takes up only 8% of the total possible combination
+```{r}
+cat(round(nrow(rental_sirs) / nrow(rental_2020) * 100,digits=2),"%")
+```
+
+
+## Conclusion
+There are a lot of limitations with my analysis.
+
+Firstly, the rental prices only illustrate the median price, it does not consider the lower range of rental.
+
+Secondly, we need to look further into the missing values. We need to investigate if the missing values is due to absence of the flat type or other reasons.
+
+Thirdly, this datasets only captures public housing and not private housings. It might be naive to assume all private housings in Singapore has a rental value higher than $1750/month.
+
+Lastly, we only look at one of the criteria for SIRS: annual property value. Self-employed individuals may still apply for SIRS even if they failed one of the criteria. Thus we are not observing the actual population who are eligible for SIRS.
+
+Nonetheless, from our current anlysis, we can tell that government has a targeted approach of targeting only around 8% of a typical self-employed individuals who lives in HDB flats.

@@ -1,0 +1,76 @@
+# Metadata for Median Rent by Town and Flat Type
+---
+Identifier: 'b35046dc-7428-4cff-968d-ef4c3e9e6c99'
+Name: 'median-rent-by-town-and-flat-type'
+Title: 'Median Rent by Town and Flat Type'
+Description:
+  - 'Median Rent by Town, Flat Type Per Quarter. The data is based on rent self-declared
+    in the renting out of flat application. The median rent indicates that half the
+    total number of units were rented above that price while half were below.'
+  - ''
+  - 'NOTES:'
+  - ''
+  - '* The figures are based on rent declared in the renting out of flat applications
+    and rounded off to the nearest $10'
+  - '* "-" Indicates that the median rent is not shown because there are less than
+    20 renting out of flat transactions in the quarter for that particular town and
+    flat type. The median rent of these cases are not shown as they may not be representative.'
+Topics:
+  - 'Infrastructure'
+Keywords:
+  - 'Flat Type'
+  - 'HDB'
+  - 'Property'
+  - 'Public Housing'
+  - 'Rental'
+  - 'Town'
+Publisher:
+  Name: 'Housing and Development Board'
+  Admin 1:
+    Name: 'Michelle Tay'
+    Department: 'HDB'
+    Email: 'michelle_mb_tay@hdb.gov.sg'
+  Admin 2:
+    Name: 'Toh Xue Qin'
+    Department: 'HDB'
+    Email: 'toh_xue_qin@hdb.gov.sg'
+Sources:
+  - 'Housing and Development Board'
+Source Url: 'http://www.hdb.gov.sg/cs/infoweb/residential/renting-a-flat/renting-from-the-open-market/rental-statistics'
+License: 'https://data.gov.sg/open-data-licence'
+Frequency: 'Quarterly'
+Coverage: '2005-04-01 to 2020-03-31'
+Last Updated: '2020-05-11T03:34:20.266175'
+Resources:
+  -
+    Identifier: '6b1ec2ff-7c38-4ce9-9bbb-af865b4d78cb'
+    Title: 'Median Rent By Town And Flat Type'
+    Url: 'https://storage.data.gov.sg/median-rent-by-town-and-flat-type/resources/median-rent-by-town-and-flat-type-2020-05-11T03-34-19Z.csv'
+    Format: 'CSV'
+    Coverage: '2005-04-01 to 2020-03-31'
+    Last Updated: '2020-05-11T03:34:19.764939'
+    Schema:
+      -
+        Name: 'quarter'
+        Title: 'Quarter'
+        Type: 'datetime'
+        Sub Type: 'quarter'
+        Format: 'YYYY-[Q]Q'
+      -
+        Name: 'town'
+        Title: 'Town'
+        Type: 'text'
+        Sub Type: 'general'
+      -
+        Name: 'flat_type'
+        Title: 'Flat Type'
+        Type: 'text'
+        Sub Type: 'general'
+      -
+        Name: 'median_rent'
+        Title: 'Median rent'
+        Type: 'text'
+        Sub Type: 'general'
+        Description:
+          - '"na" : Data not available or not applicable'
+          - '"-" : Data is negligible or not significant'
