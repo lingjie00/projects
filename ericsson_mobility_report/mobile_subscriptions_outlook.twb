@@ -1,0 +1,1760 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20202.20.0614.2338                               -->
+<workbook original-version='18.1' source-build='2020.2.2 (20202.20.0614.2338)' source-platform='mac' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <_.fcp.SetMembershipControl.true...SetMembershipControl />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location id='mobile_subscriptions_outlook' path='/workbooks' revision='1.2' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='global_mobile_subscriptions' inline='true' name='federated.13pitrf1n8n2vy15re26m004bmna' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='global_mobile_subscriptions' name='textscan.0wpa2b71kywcr2116hdv11sb1yfg'>
+            <connection class='textscan' directory='/Users/lingjie/Documents/GitHub/ericsson_mobility_report/data' filename='global_mobile_subscriptions.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Pivot' type='pivot'>
+          <columns>
+            <column datatype='string' name='Pivot Field Names' />
+            <column datatype='integer' name='Pivot Field Values' />
+          </columns>
+          <tag name='Pivot Field Names'>
+            <value name='[2018]' />
+            <value name='[2019]' />
+            <value name='[Forecast 2025]' />
+          </tag>
+          <groups>
+            <group name='Pivot Field Values'>
+              <field name='[global_mobile_subscriptions.csv].[2018]' />
+              <field name='[global_mobile_subscriptions.csv].[2019]' />
+              <field name='[global_mobile_subscriptions.csv].[Forecast 2025]' />
+            </group>
+          </groups>
+          <relation connection='textscan.0wpa2b71kywcr2116hdv11sb1yfg' name='global_mobile_subscriptions.csv' table='[global_mobile_subscriptions#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_SG' separator=','>
+              <column datatype='string' name='Mobile subscriptions' ordinal='0' />
+              <column datatype='integer' name='2018' ordinal='1' />
+              <column datatype='integer' name='2019' ordinal='2' />
+              <column datatype='integer' name='Forecast 2025' ordinal='3' />
+              <column datatype='real' name='CAGR* 2019-2025' ordinal='4' />
+              <column datatype='string' name='Unit' ordinal='5' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Pivot' type='pivot'>
+          <columns>
+            <column datatype='string' name='Pivot Field Names' />
+            <column datatype='integer' name='Pivot Field Values' />
+          </columns>
+          <tag name='Pivot Field Names'>
+            <value name='[2018]' />
+            <value name='[2019]' />
+            <value name='[Forecast 2025]' />
+          </tag>
+          <groups>
+            <group name='Pivot Field Values'>
+              <field name='[global_mobile_subscriptions.csv].[2018]' />
+              <field name='[global_mobile_subscriptions.csv].[2019]' />
+              <field name='[global_mobile_subscriptions.csv].[Forecast 2025]' />
+            </group>
+          </groups>
+          <relation connection='textscan.0wpa2b71kywcr2116hdv11sb1yfg' name='global_mobile_subscriptions.csv' table='[global_mobile_subscriptions#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_SG' separator=','>
+              <column datatype='string' name='Mobile subscriptions' ordinal='0' />
+              <column datatype='integer' name='2018' ordinal='1' />
+              <column datatype='integer' name='2019' ordinal='2' />
+              <column datatype='integer' name='Forecast 2025' ordinal='3' />
+              <column datatype='real' name='CAGR* 2019-2025' ordinal='4' />
+              <column datatype='string' name='Unit' ordinal='5' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[global_mobile_subscriptions.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_SG&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Mobile subscriptions</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Mobile subscriptions]</local-name>
+            <parent-name>[global_mobile_subscriptions.csv]</parent-name>
+            <remote-alias>Mobile subscriptions</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[global_mobile_subscriptions.csv_49FDF49B45CC4C48805CA917372E557D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CAGR* 2019-2025</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[CAGR* 2019-2025]</local-name>
+            <parent-name>[global_mobile_subscriptions.csv]</parent-name>
+            <remote-alias>CAGR* 2019-2025</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[global_mobile_subscriptions.csv_49FDF49B45CC4C48805CA917372E557D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Unit</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Unit]</local-name>
+            <parent-name>[global_mobile_subscriptions.csv]</parent-name>
+            <remote-alias>Unit</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[global_mobile_subscriptions.csv_49FDF49B45CC4C48805CA917372E557D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pivot Field Names</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Pivot Field Names]</local-name>
+            <parent-name>[Pivot]</parent-name>
+            <remote-alias>Pivot Field Names</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[global_mobile_subscriptions.csv_49FDF49B45CC4C48805CA917372E557D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pivot Field Values</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Pivot Field Values]</local-name>
+            <parent-name>[Pivot]</parent-name>
+            <remote-alias>Pivot Field Values</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[global_mobile_subscriptions.csv_49FDF49B45CC4C48805CA917372E557D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='real' hidden='true' name='[CAGR* 2019-2025]' role='dimension' type='ordinal' />
+      <column caption='Year' datatype='integer' datatype-customized='true' name='[Calculation_2455587707227615234]' role='dimension' type='quantitative'>
+        <calculation class='tableau' formula='INT(REPLACE([Pivot Field Names],&apos;Forecast &apos;,&apos;&apos;))' />
+      </column>
+      <column datatype='string' name='[Mobile subscriptions]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;Mobile broadband subscriptions&quot;' value='Mobile broadband' />
+          <alias key='&quot;Mobile PC, tablet and mobile router subscriptions&quot;' value='Mobile PC and tablet' />
+          <alias key='&quot;Mobile subscriptions, 5G&quot;' value='5G' />
+          <alias key='&quot;Mobile subscriptions, GSM/EDGE-only&quot;' value='GSM/EDGE-only' />
+          <alias key='&quot;Mobile subscriptions, LTE&quot;' value='LTE' />
+          <alias key='&quot;Mobile subscriptions, WCDMA/HSPA&quot;' value='WCDMA/HSPA' />
+          <alias key='&quot;Smartphone subscriptions&quot;' value='Smartphone' />
+          <alias key='&quot;Worldwide mobile subscriptions&quot;' value='Mobile' />
+        </aliases>
+      </column>
+      <column caption='Year_char' datatype='string' name='[Pivot Field Names]' role='dimension' type='nominal' />
+      <column caption='Values' datatype='integer' name='[Pivot Field Values]' role='measure' type='quantitative' />
+      <column datatype='string' hidden='true' name='[Unit]' role='dimension' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='global_mobile_subscriptions.csv' datatype='table' name='[__tableau_internal_object_id__].[global_mobile_subscriptions.csv_49FDF49B45CC4C48805CA917372E557D]' role='measure' type='quantitative' />
+      <column-instance column='[Mobile subscriptions]' derivation='None' name='[none:Mobile subscriptions:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='/Users/lingjie/Documents/GitHub/ericsson_mobility_report/global_mobile_subscriptions.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='08/02/2020 02:34:46 PM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh>
+            <refresh-event add-from-file-path='global_mobile_subscriptions' increment-value='%null%' refresh-type='create' rows-inserted='27' timestamp-start='2020-08-02 14:34:46.634' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Mobile subscriptions</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Mobile subscriptions]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Mobile subscriptions</remote-alias>
+              <ordinal>0</ordinal>
+              <family>global_mobile_subscriptions.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[global_mobile_subscriptions.csv_49FDF49B45CC4C48805CA917372E557D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Pivot Field Names</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Pivot Field Names]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Pivot Field Names</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Pivot</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='binary' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[global_mobile_subscriptions.csv_49FDF49B45CC4C48805CA917372E557D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Pivot Field Values</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Pivot Field Values]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Pivot Field Values</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Pivot</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>26</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[global_mobile_subscriptions.csv_49FDF49B45CC4C48805CA917372E557D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-aliased-fields='true' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Mobile subscriptions:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Mobile subscriptions, 5G&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Mobile broadband subscriptions&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Mobile subscriptions, WCDMA/HSPA&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;Mobile PC, tablet and mobile router subscriptions&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Smartphone subscriptions&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Mobile subscriptions, LTE&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Mobile subscriptions, GSM/EDGE-only&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;Worldwide mobile subscriptions&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Singapore&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='Mobile subscriptions' />
+        <field-sort-custom-order field='Pivot Field Names' />
+        <field-sort-custom-order field='Calculation_2455587707227615234' />
+        <field-sort-custom-order field='Pivot Field Values' />
+      </field-sort-info>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='global_mobile_subscriptions.csv' id='global_mobile_subscriptions.csv_49FDF49B45CC4C48805CA917372E557D'>
+            <properties context=''>
+              <relation name='Pivot' type='pivot'>
+                <columns>
+                  <column datatype='string' name='Pivot Field Names' />
+                  <column datatype='integer' name='Pivot Field Values' />
+                </columns>
+                <tag name='Pivot Field Names'>
+                  <value name='[2018]' />
+                  <value name='[2019]' />
+                  <value name='[Forecast 2025]' />
+                </tag>
+                <groups>
+                  <group name='Pivot Field Values'>
+                    <field name='[global_mobile_subscriptions.csv].[2018]' />
+                    <field name='[global_mobile_subscriptions.csv].[2019]' />
+                    <field name='[global_mobile_subscriptions.csv].[Forecast 2025]' />
+                  </group>
+                </groups>
+                <relation connection='textscan.0wpa2b71kywcr2116hdv11sb1yfg' name='global_mobile_subscriptions.csv' table='[global_mobile_subscriptions#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='en_SG' separator=','>
+                    <column datatype='string' name='Mobile subscriptions' ordinal='0' />
+                    <column datatype='integer' name='2018' ordinal='1' />
+                    <column datatype='integer' name='2019' ordinal='2' />
+                    <column datatype='integer' name='Forecast 2025' ordinal='3' />
+                    <column datatype='real' name='CAGR* 2019-2025' ordinal='4' />
+                    <column datatype='string' name='Unit' ordinal='5' />
+                  </columns>
+                </relation>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Info Technology Market Dominance'>
+      <layout-options>
+        <caption>
+          <formatted-text>
+            <run>Figure 7: Mobile subscriptions by technology (billion)
+Note: In 2025, 2.8 billion 5G subscriptions are forecast.</run>
+          </formatted-text>
+        </caption>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='global_mobile_subscriptions' name='federated.13pitrf1n8n2vy15re26m004bmna' />
+          </datasources>
+          <datasource-dependencies datasource='federated.13pitrf1n8n2vy15re26m004bmna'>
+            <column caption='Year' datatype='integer' datatype-customized='true' name='[Calculation_2455587707227615234]' role='dimension' type='quantitative'>
+              <calculation class='tableau' formula='INT(REPLACE([Pivot Field Names],&apos;Forecast &apos;,&apos;&apos;))' />
+            </column>
+            <column caption='SUM([Values])/1000' datatype='real' name='[Calculation_2455587707231084548]' role='measure' type='quantitative' user:unnamed='Info Technology Market Dominance'>
+              <calculation class='tableau' formula='SUM([Pivot Field Values])/1000' />
+            </column>
+            <column caption='SUM([Values])/1000' datatype='real' name='[Calculation_2455587707231150085]' role='measure' type='quantitative' user:unnamed='Info Technology Market Dominance'>
+              <calculation class='tableau' formula='SUM([Pivot Field Values])/1000' />
+            </column>
+            <column datatype='string' name='[Mobile subscriptions]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;Mobile broadband subscriptions&quot;' value='Mobile broadband' />
+                <alias key='&quot;Mobile PC, tablet and mobile router subscriptions&quot;' value='Mobile PC and tablet' />
+                <alias key='&quot;Mobile subscriptions, 5G&quot;' value='5G' />
+                <alias key='&quot;Mobile subscriptions, GSM/EDGE-only&quot;' value='GSM/EDGE-only' />
+                <alias key='&quot;Mobile subscriptions, LTE&quot;' value='LTE' />
+                <alias key='&quot;Mobile subscriptions, WCDMA/HSPA&quot;' value='WCDMA/HSPA' />
+                <alias key='&quot;Smartphone subscriptions&quot;' value='Smartphone' />
+                <alias key='&quot;Worldwide mobile subscriptions&quot;' value='Mobile' />
+              </aliases>
+            </column>
+            <column caption='Year_char' datatype='string' name='[Pivot Field Names]' role='dimension' type='nominal' />
+            <column caption='Values' datatype='integer' name='[Pivot Field Values]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_2455587707227615234]' derivation='None' name='[none:Calculation_2455587707227615234:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Mobile subscriptions]' derivation='None' name='[none:Mobile subscriptions:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_2455587707231084548]' derivation='User' name='[usr:Calculation_2455587707231084548:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_2455587707231150085]' derivation='User' name='[usr:Calculation_2455587707231150085:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.13pitrf1n8n2vy15re26m004bmna].[none:Mobile subscriptions:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Mobile subscriptions:nk]' member='&quot;Mobile subscriptions, 5G&quot;' />
+              <groupfilter function='member' level='[none:Mobile subscriptions:nk]' member='&quot;Mobile subscriptions, GSM/EDGE-only&quot;' />
+              <groupfilter function='member' level='[none:Mobile subscriptions:nk]' member='&quot;Mobile subscriptions, LTE&quot;' />
+              <groupfilter function='member' level='[none:Mobile subscriptions:nk]' member='&quot;Mobile subscriptions, WCDMA/HSPA&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Mobile subscriptions:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707231150085:qk]' scope='rows' value='false' />
+            <format attr='title' class='0' field='[federated.13pitrf1n8n2vy15re26m004bmna].[none:Calculation_2455587707227615234:qk]' scope='cols' value='' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707231084548:qk]' value='n#,##0.00;-#,##0.00' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#ffffff' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+            <format attr='line-visibility' id='refline0' value='on' />
+            <format attr='line-pattern-only' id='refline0' value='dashed' />
+            <format attr='fill-above' id='refline1' value='#00000000' />
+            <format attr='fill-below' id='refline1' value='#00000000' />
+            <format attr='line-visibility' id='refline1' value='on' />
+            <format attr='line-pattern-only' id='refline1' value='dashed' />
+            <format attr='vertical-align' id='refline1' value='top' />
+            <format attr='stroke-color' id='refline0' value='#f5f5f5' />
+            <format attr='stroke-color' id='refline1' value='#f5f5f5' />
+            <format attr='wrap' id='refline0' value='off' />
+            <format attr='text-orientation' id='refline0' value='0' />
+            <format attr='text-align' id='refline0' value='left' />
+            <format attr='vertical-align' id='refline0' value='bottom' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.13pitrf1n8n2vy15re26m004bmna].[none:Mobile subscriptions:nk]' />
+              <text column='[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707231084548:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run>Æ&#10;</run>
+                <run><![CDATA[<[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707231084548:qk]>]]></run>
+                <run> billion</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='match' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-mode' value='line-ends' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707231150085:qk]</rows>
+        <cols>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Calculation_2455587707227615234:qk]</cols>
+        <mark-labels>
+          <mark-label id='9'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Calculation_2455587707227615234:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707231150085:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Calculation_2455587707227615234:qk]</field>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Mobile subscriptions:nk]</field>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707231084548:qk]</field>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707231150085:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2025</value>
+                <value>&quot;Mobile subscriptions, GSM/EDGE-only&quot;</value>
+                <value>0.83999999999999997</value>
+                <value>0.83999999999999997</value>
+              </tuple>
+            </tuple-reference>
+            <label-position x='42' y='23' />
+          </mark-label>
+          <mark-label id='10'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Calculation_2455587707227615234:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707231150085:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Calculation_2455587707227615234:qk]</field>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Mobile subscriptions:nk]</field>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707231084548:qk]</field>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707231150085:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2025</value>
+                <value>&quot;Mobile subscriptions, WCDMA/HSPA&quot;</value>
+                <value>0.81999999999999995</value>
+                <value>0.81999999999999995</value>
+              </tuple>
+            </tuple-reference>
+            <label-position x='43' y='-23' />
+          </mark-label>
+          <mark-label id='11'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Calculation_2455587707227615234:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707231150085:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Calculation_2455587707227615234:qk]</field>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Mobile subscriptions:nk]</field>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707231084548:qk]</field>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707231150085:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2018</value>
+                <value>&quot;Mobile subscriptions, GSM/EDGE-only&quot;</value>
+                <value>1.95</value>
+                <value>1.95</value>
+              </tuple>
+            </tuple-reference>
+            <label-position x='-40' y='-18' />
+          </mark-label>
+          <mark-label id='12'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Calculation_2455587707227615234:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707231150085:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Calculation_2455587707227615234:qk]</field>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Mobile subscriptions:nk]</field>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707231084548:qk]</field>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707231150085:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2018</value>
+                <value>&quot;Mobile subscriptions, WCDMA/HSPA&quot;</value>
+                <value>2.02</value>
+                <value>2.02</value>
+              </tuple>
+            </tuple-reference>
+            <label-position x='-43' y='28' />
+          </mark-label>
+          <mark-label id='13'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Calculation_2455587707227615234:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707231150085:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Calculation_2455587707227615234:qk]</field>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Mobile subscriptions:nk]</field>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707231084548:qk]</field>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707231150085:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2025</value>
+                <value>&quot;Mobile subscriptions, 5G&quot;</value>
+                <value>2.79</value>
+                <value>2.79</value>
+              </tuple>
+            </tuple-reference>
+            <label-position x='49' y='21' />
+          </mark-label>
+          <mark-label id='14'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Calculation_2455587707227615234:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707231150085:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Calculation_2455587707227615234:qk]</field>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Mobile subscriptions:nk]</field>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707231084548:qk]</field>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707231150085:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2025</value>
+                <value>&quot;Mobile subscriptions, LTE&quot;</value>
+                <value>4.3899999999999997</value>
+                <value>4.3899999999999997</value>
+              </tuple>
+            </tuple-reference>
+            <label-position x='49' y='-5' />
+          </mark-label>
+          <mark-label id='15'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Calculation_2455587707227615234:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707231150085:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Calculation_2455587707227615234:qk]</field>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Mobile subscriptions:nk]</field>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707231084548:qk]</field>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707231150085:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2018</value>
+                <value>&quot;Mobile subscriptions, LTE&quot;</value>
+                <value>3.5499999999999998</value>
+                <value>3.5499999999999998</value>
+              </tuple>
+            </tuple-reference>
+            <label-position x='-30' y='21' />
+          </mark-label>
+          <mark-label id='16'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Calculation_2455587707227615234:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707231150085:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Calculation_2455587707227615234:qk]</field>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Mobile subscriptions:nk]</field>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707231084548:qk]</field>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707231150085:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2018</value>
+                <value>&quot;Mobile subscriptions, 5G&quot;</value>
+                <value>0.0</value>
+                <value>0.0</value>
+              </tuple>
+            </tuple-reference>
+            <label-position x='-50' y='6' />
+          </mark-label>
+        </mark-labels>
+      </table>
+      <simple-id uuid='{73C446CF-675C-4192-918C-5D5CF9A7FC0A}' />
+    </worksheet>
+    <worksheet name='Subscriptions Market Dominance'>
+      <layout-options>
+        <caption>
+          <formatted-text>
+            <run>Figure 9: Subscriptions and subscribers (billion)</run>
+          </formatted-text>
+        </caption>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='global_mobile_subscriptions' name='federated.13pitrf1n8n2vy15re26m004bmna' />
+          </datasources>
+          <datasource-dependencies datasource='federated.13pitrf1n8n2vy15re26m004bmna'>
+            <column caption='Year' datatype='integer' datatype-customized='true' name='[Calculation_2455587707227615234]' role='dimension' type='quantitative'>
+              <calculation class='tableau' formula='INT(REPLACE([Pivot Field Names],&apos;Forecast &apos;,&apos;&apos;))' />
+            </column>
+            <column caption='SUM([Values])/1000' datatype='real' name='[Calculation_2455587707234807814]' role='measure' type='quantitative' user:unnamed='Subscriptions Market Dominance'>
+              <calculation class='tableau' formula='SUM([Pivot Field Values])/1000' />
+            </column>
+            <column caption='SUM([Values])/1000' datatype='real' name='[Calculation_2455587707234820103]' role='measure' type='quantitative' user:unnamed='Subscriptions Market Dominance'>
+              <calculation class='tableau' formula='SUM([Pivot Field Values])/1000' />
+            </column>
+            <column datatype='string' name='[Mobile subscriptions]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;Mobile broadband subscriptions&quot;' value='Mobile broadband' />
+                <alias key='&quot;Mobile PC, tablet and mobile router subscriptions&quot;' value='Mobile PC and tablet' />
+                <alias key='&quot;Mobile subscriptions, 5G&quot;' value='5G' />
+                <alias key='&quot;Mobile subscriptions, GSM/EDGE-only&quot;' value='GSM/EDGE-only' />
+                <alias key='&quot;Mobile subscriptions, LTE&quot;' value='LTE' />
+                <alias key='&quot;Mobile subscriptions, WCDMA/HSPA&quot;' value='WCDMA/HSPA' />
+                <alias key='&quot;Smartphone subscriptions&quot;' value='Smartphone' />
+                <alias key='&quot;Worldwide mobile subscriptions&quot;' value='Mobile' />
+              </aliases>
+            </column>
+            <column caption='Year_char' datatype='string' name='[Pivot Field Names]' role='dimension' type='nominal' />
+            <column caption='Values' datatype='integer' name='[Pivot Field Values]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_2455587707227615234]' derivation='None' name='[none:Calculation_2455587707227615234:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Mobile subscriptions]' derivation='None' name='[none:Mobile subscriptions:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_2455587707234807814]' derivation='User' name='[usr:Calculation_2455587707234807814:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_2455587707234820103]' derivation='User' name='[usr:Calculation_2455587707234820103:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.13pitrf1n8n2vy15re26m004bmna].[none:Mobile subscriptions:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Mobile subscriptions:nk]' member='&quot;Mobile broadband subscriptions&quot;' />
+              <groupfilter function='member' level='[none:Mobile subscriptions:nk]' member='&quot;Mobile PC, tablet and mobile router subscriptions&quot;' />
+              <groupfilter function='member' level='[none:Mobile subscriptions:nk]' member='&quot;Smartphone subscriptions&quot;' />
+              <groupfilter function='member' level='[none:Mobile subscriptions:nk]' member='&quot;Worldwide mobile subscriptions&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Mobile subscriptions:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707234820103:qk]' scope='rows' value='false' />
+            <format attr='title' class='0' field='[federated.13pitrf1n8n2vy15re26m004bmna].[none:Calculation_2455587707227615234:qk]' scope='cols' value='' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707234807814:qk]' value='n#,##0.00;-#,##0.00' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='legend-title'>
+            <format attr='text-align' value='left' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.13pitrf1n8n2vy15re26m004bmna].[none:Mobile subscriptions:nk]' />
+              <text column='[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707234807814:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run>&#10;&lt;</run>
+                <run>[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707234807814:qk]</run>
+                <run>&gt; billion&#10;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='match' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='false' />
+                <format attr='mark-labels-mode' value='line-ends' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707234820103:qk]</rows>
+        <cols>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Calculation_2455587707227615234:qk]</cols>
+        <mark-labels>
+          <mark-label id='0'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Calculation_2455587707227615234:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707234820103:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Calculation_2455587707227615234:qk]</field>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Mobile subscriptions:nk]</field>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707234807814:qk]</field>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707234820103:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2018</value>
+                <value>&quot;Mobile broadband subscriptions&quot;</value>
+                <value>5.5700000000000003</value>
+                <value>5.5700000000000003</value>
+              </tuple>
+            </tuple-reference>
+            <label-position x='-36' y='8' />
+          </mark-label>
+          <mark-label id='1'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Calculation_2455587707227615234:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707234820103:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Calculation_2455587707227615234:qk]</field>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Mobile subscriptions:nk]</field>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707234807814:qk]</field>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707234820103:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2018</value>
+                <value>&quot;Smartphone subscriptions&quot;</value>
+                <value>4.9800000000000004</value>
+                <value>4.9800000000000004</value>
+              </tuple>
+            </tuple-reference>
+            <label-position x='-36' y='-6' />
+          </mark-label>
+          <mark-label id='2'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Calculation_2455587707227615234:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707234820103:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Calculation_2455587707227615234:qk]</field>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Mobile subscriptions:nk]</field>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707234807814:qk]</field>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707234820103:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2025</value>
+                <value>&quot;Smartphone subscriptions&quot;</value>
+                <value>7.5</value>
+                <value>7.5</value>
+              </tuple>
+            </tuple-reference>
+            <label-position x='38' y='-17' />
+          </mark-label>
+          <mark-label id='3'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Calculation_2455587707227615234:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707234820103:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Calculation_2455587707227615234:qk]</field>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Mobile subscriptions:nk]</field>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707234807814:qk]</field>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707234820103:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2018</value>
+                <value>&quot;Worldwide mobile subscriptions&quot;</value>
+                <value>7.6699999999999999</value>
+                <value>7.6699999999999999</value>
+              </tuple>
+            </tuple-reference>
+            <label-position x='-36' y='9' />
+          </mark-label>
+          <mark-label id='4'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Calculation_2455587707227615234:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707234820103:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Calculation_2455587707227615234:qk]</field>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Mobile subscriptions:nk]</field>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707234807814:qk]</field>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707234820103:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2025</value>
+                <value>&quot;Mobile broadband subscriptions&quot;</value>
+                <value>7.8200000000000003</value>
+                <value>7.8200000000000003</value>
+              </tuple>
+            </tuple-reference>
+            <label-position x='38' y='-4' />
+          </mark-label>
+          <mark-label id='5'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Calculation_2455587707227615234:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707234820103:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Calculation_2455587707227615234:qk]</field>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Mobile subscriptions:nk]</field>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707234807814:qk]</field>
+                  <field>[federated.13pitrf1n8n2vy15re26m004bmna].[usr:Calculation_2455587707234820103:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2025</value>
+                <value>&quot;Worldwide mobile subscriptions&quot;</value>
+                <value>8.8599999999999994</value>
+                <value>8.8599999999999994</value>
+              </tuple>
+            </tuple-reference>
+            <label-position x='38' y='-4' />
+          </mark-label>
+        </mark-labels>
+      </table>
+      <simple-id uuid='{01AB8B55-04C3-4F71-AE98-D0CD79DEB335}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Info Technology Market Dominance Dashboard'>
+      <style>
+        <style-rule element='dash-text'>
+          <format attr='vertical-align' id='dash-text_10' value='top' />
+          <format attr='wrap' id='dash-text_10' value='on' />
+        </style-rule>
+      </style>
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' preset-index='1' sizing-mode='fixed' />
+      <zones>
+        <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='4' w='100000' x='0' y='0'>
+          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='174' param='horz' w='98400' x='800' y='1000'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='171' param='horz' w='98400' x='800' y='1000'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='98000' id='169' w='98400' x='800' y='1000'>
+                <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='87501' id='110' param='horz' w='98400' x='800' y='11499'>
+                  <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='87501' id='7' param='horz' w='98400' x='800' y='11499'>
+                    <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='87501' id='5' w='98400' x='800' y='11499'>
+                      <zone h='43747' id='3' name='Info Technology Market Dominance' show-caption='true' w='63595' x='17200' y='11499'>
+                        <zone-style>
+                          <format attr='border-color' value='#000000' />
+                          <format attr='border-style' value='none' />
+                          <format attr='border-width' value='0' />
+                          <format attr='margin' value='4' />
+                        </zone-style>
+                      </zone>
+                      <zone _.fcp.SetMembershipControl.false...type='empty' _.fcp.SetMembershipControl.true...type-v2='empty' h='87501' id='15' w='18405' x='80795' y='11499'>
+                        <zone-style>
+                          <format attr='border-color' value='#000000' />
+                          <format attr='border-style' value='none' />
+                          <format attr='border-width' value='0' />
+                          <format attr='margin' value='4' />
+                        </zone-style>
+                      </zone>
+                      <zone h='43754' id='108' name='Subscriptions Market Dominance' show-caption='true' w='63595' x='17200' y='55246'>
+                        <zone-style>
+                          <format attr='border-color' value='#000000' />
+                          <format attr='border-style' value='none' />
+                          <format attr='border-width' value='0' />
+                          <format attr='margin' value='4' />
+                        </zone-style>
+                      </zone>
+                      <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='43747' id='172' name='Info Technology Market Dominance' pane-specification-id='0' param='[federated.13pitrf1n8n2vy15re26m004bmna].[none:Mobile subscriptions:nk]' w='16400' x='800' y='11499'>
+                        <zone-style>
+                          <format attr='border-color' value='#000000' />
+                          <format attr='border-style' value='none' />
+                          <format attr='border-width' value='0' />
+                          <format attr='margin' value='4' />
+                        </zone-style>
+                      </zone>
+                      <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='43754' id='175' name='Subscriptions Market Dominance' pane-specification-id='0' param='[federated.13pitrf1n8n2vy15re26m004bmna].[none:Mobile subscriptions:nk]' w='16400' x='800' y='55246'>
+                        <zone-style>
+                          <format attr='border-color' value='#000000' />
+                          <format attr='border-style' value='none' />
+                          <format attr='border-width' value='0' />
+                          <format attr='margin' value='4' />
+                        </zone-style>
+                      </zone>
+                    </zone>
+                  </zone>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' forceUpdate='true' h='10499' id='122' w='98400' x='800' y='1000'>
+                  <formatted-text>
+                    <run bold='true' fontsize='20'>Mobile subscriptions outlook</run>
+                    <run>Æ&#10;</run>
+                    <run fontsize='12'>A total of 190 million 5G subscriptions are expected by the end of 2020.</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' forceUpdate='true' h='11500' id='10' w='17700' x='81200' y='24875'>
+          <formatted-text>
+            <run>5G subscriptions are forecast to account for about</run>
+            <run bold='true' fontcolor='#4e79a7'> 30 percent</run>
+            <run> of total mobile subscriptions.</run>
+          </formatted-text>
+        </zone>
+        <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' forceUpdate='true' h='8875' id='194' w='16900' x='81600' y='65250'>
+          <formatted-text>
+            <run>In 2025, </run>
+            <run bold='true' fontcolor='#499894'>88</run>
+            <run>Æ </run>
+            <run bold='true' fontcolor='#59a14f'>percent</run>
+            <run> of subscriptions are projected to be for mobile broadband</run>
+          </formatted-text>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='950' minheight='950' sizing-mode='vscroll' />
+          <zones>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='272' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='271' param='vert' w='98400' x='800' y='1000'>
+                <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' forceUpdate='true' h='10499' id='122' w='98400' x='800' y='1000'>
+                  <formatted-text>
+                    <run bold='true' fontsize='20'>Mobile subscriptions outlook</run>
+                    <run>Æ&#10;</run>
+                    <run fontsize='12'>A total of 190 million 5G subscriptions are expected by the end of 2020.</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='43747' id='3' is-fixed='true' name='Info Technology Market Dominance' show-caption='true' w='63595' x='17200' y='11499'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='43747' id='172' name='Info Technology Market Dominance' pane-specification-id='0' param='[federated.13pitrf1n8n2vy15re26m004bmna].[none:Mobile subscriptions:nk]' w='16400' x='800' y='11499'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' forceUpdate='true' h='11500' id='10' w='17700' x='81200' y='24875'>
+                  <formatted-text>
+                    <run>5G subscriptions are forecast to account for about</run>
+                    <run bold='true' fontcolor='#4e79a7'> 30 percent</run>
+                    <run> of total mobile subscriptions.</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='43754' id='108' is-fixed='true' name='Subscriptions Market Dominance' show-caption='true' w='63595' x='17200' y='55246'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='43754' id='175' name='Subscriptions Market Dominance' pane-specification-id='0' param='[federated.13pitrf1n8n2vy15re26m004bmna].[none:Mobile subscriptions:nk]' w='16400' x='800' y='55246'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' forceUpdate='true' h='8875' id='194' w='16900' x='81600' y='65250'>
+                  <formatted-text>
+                    <run>In 2025, </run>
+                    <run bold='true' fontcolor='#499894'>88</run>
+                    <run>Æ </run>
+                    <run bold='true' fontcolor='#59a14f'>percent</run>
+                    <run> of subscriptions are projected to be for mobile broadband</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{128F7F91-9B76-4879-B712-D4DC89DF86CD}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Info Technology Market Dominance'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.13pitrf1n8n2vy15re26m004bmna].[none:Mobile subscriptions:nk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='94'>
+            <card type='caption' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Calculation_2455587707227615234:ok]</field>
+            <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Calculation_2455587707227615234:qk]</field>
+            <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Mobile subscriptions:nk]</field>
+            <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Pivot Field Names:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{724B84B4-20F8-4A28-9CFC-B97EBA46B552}' />
+    </window>
+    <window class='worksheet' name='Subscriptions Market Dominance'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.13pitrf1n8n2vy15re26m004bmna].[none:Mobile subscriptions:nk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='94'>
+            <card type='caption' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Calculation_2455587707227615234:qk]</field>
+            <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Mobile subscriptions:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{DEAA89CD-6AD8-40D3-A7D4-DF765DC168F3}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Info Technology Market Dominance Dashboard'>
+      <viewpoints>
+        <viewpoint name='Info Technology Market Dominance'>
+          <zoom type='entire-view' />
+          <highlight>
+            <color-one-way>
+              <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Mobile subscriptions:nk]</field>
+            </color-one-way>
+          </highlight>
+          <floating-toolbar-visibility value='1' />
+        </viewpoint>
+        <viewpoint name='Subscriptions Market Dominance'>
+          <zoom type='entire-view' />
+          <highlight>
+            <color-one-way>
+              <field>[federated.13pitrf1n8n2vy15re26m004bmna].[none:Mobile subscriptions:nk]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{236D686F-D3FE-44FD-AA27-EC0A1AB4E29B}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Info Technology Market Dominance' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAXlUlEQVR4nO3daZNb153f8e+592K/QKP3hTubtCNRu0RSoizbGWuznUkexB478SS2KpW3
+      kLyJpPICkirLzoyzVFLjGckay5SnxrREMhYlS7JEiZTUYpNs9r6gsd/lnDy4aJDUSrEbje6+
+      /08VCwsvgEPi/HC2uyhjjEGImLK6XQAhuqkdgDAMu1kOIbpCWgARaxIAEWsSABFrEgARaxIA
+      EWsSABFrEgARaxIAEWsSABFrTrcLIMTHGd+PbsMQtMaEGvTa/RCMwQTBzdv6AWAgCDDGRM8b
+      IPAxxkBw/fVGh9F22kgAtoK1LxVjrt/XGgyYMGg9r6ONwxBoPV7bfu2L1xp0q3LosPUag/H8
+      VqWJKsVapYkqiwY/aFWS1nuE4fXb1i4yUYUy1yuc519/HnP9PUxUboxpPV7703oeon8bRJ8R
+      3Wm9pnXr2ChlgW2DZaGstfsKZTugQDkJAFTCad1Gj3EclFLRY6XAcUAplOO030dZVrSdZUkA
+      NoI/NcXq879CV6qAaVXS6xW7XXl167GOKi+tSoxtR1+WUii71Su1HZSi/XfKtqPnLTuqADc9
+      r1pfqIoqjG1HX3TrNSqZbFcC1ioHtCuayuXalUVZqlVJbLCt9vuvVaiowilUcq0Ctt4rkUC1
+      /g0f/6OUapXduulWrT3+tG03iQRgHYzWVH5zkurpMxR/8Bc4w0PRX9g2qnV7c+W1osetW2x7
+      079wcTO1djxAGIbYa1+U+ELh8jLLP/s5dn8/Pd//HlY63e0iidsgLcCXZIyhduYs5eeep+df
+      /ZD03XfJr/g2Ji3Al6BrNZZ//legQ4o/+hF2T6HbRRLrJC3ALTDG0Dx/npX/8T9xn3iC3Ncf
+      k1/9HUJagC9gPI/SL/8W79Il+n7yY5yhoW4XSWwgCcDn8D76iOWf/Zzs8eO4Tz5xfTZH7BjS
+      BfoUJggo//pF6q+/Tu8zz5DYu0e6PDuUtAAf48/OsvKz/46za4ye7/1LrFSq20USHSQtQEs0
+      vXmG8gu/pvjDH5C+60i3iyQ2gbQAQLiywvJf/wKVTNL7lz/CymS6XSSxSWLdAhhjqL/+R1b/
+      5pcU/tl3yRw7en3/FBELsW0BdKNB6X/9b4KlJXp//G9x+vq6XSTRBbELgDEGb+Ijlp99ltxj
+      j+F+689kejPGYhUA4/us/uoFmu++S+8zPyExMtLtIokui00A/KtTLP30WdJ3/BMK//zPo33k
+      Rezt+EGwCUOqp05R/d0piv/mL0kePCiLWqJtR7cAwdISyz99FrtYpPjDH2Dlct0ukthidmQL
+      EE1vvs7q3/ySnu9/n8y993S7SGKL2nEtQFipsPLXv0DX6vT/+3+H5brdLpLYwnZMC2CMwbt4
+      keW/+gX5Jx8n++ijsqglvtCOaAGM51H6P/8Xb/Iyvc/8WKY3xS3blADoZhN/aorkvn2YZpNg
+      dha7t4+wvEpi9250pYLluuhyufUCg8qkb2lPTO/KFZZ/+iyZBx8k//RTsqglvpRN6QIp2yZc
+      WCAsFglm57BSKbzJSey+Xmjtj5PcsxuUQjebYEA5DrpSQWUzmGqNzAP33/SeJggov/gi9VfP
+      0fvMMyT37d2Mf4rYYTalk2x8HyuXQ6+USIwME8zN4QwN4V+5CsZg9/Wi63XCciXaPvAJZmex
+      3Og1lnvz9GWwuMj8f/rP6NUyg//xP0jlF7dtk7pAHuHSEnaxB4xBV2uoTBrj+9jFIuHiIlY+
+      H50Wb22Nyhh0uYxVKIBSWMkkRmtqr5ym/JuTFH/wF6SO3CmLWmJdts0gOKxUWP7Zz1GOQ/FH
+      /xpbpjfFBtgW06DGGJb+638j9+gJMkePyq++2DDbogUwJjrhrHK2RV7FNrItapRaO821EBtM
+      lkpFrEkARKxJAESsSQBErEkARKxJAESsSQBErEkARKxJAESsSQBErEkARKxJAESsSQBErEkA
+      RKxJAESsSQBErEkARKxJAESsSQBErEkARKxJAESsSQBErEkARKxJAESsSQBErEkARKxJAESs
+      SQBErEkARKxJAESsSQBErEkARKxJAESsSQBErEkARKxJAESsSQBErEkARKxJAESsSQBErEkA
+      RKxJAESsSQBErEkARKxJAESsSQBErEkARKxJAESsOZ1646V6jaYfMJLPM1Mpk3ESVL0mbioF
+      gKUUxoA2pv04adtYlsIPNUnbJmHbnSqeEEAHA6CARuhjgGYQ0PB9LEsRaE2l2aTme4Aik0hE
+      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
+      IgAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='Info Technology Market Dominance Dashboard' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Subscriptions Market Dominance' width='192'>
+      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
+      iFSTAIhUkwCIVHvrAGitt//Z8U993X0IcdW89eXS0as+pmViuwXGJwNM0ySOYkrNQ2aDKcUD
+      B8MwCNafV5Mr2kRBRPHAYdaf4jXKcteluHRvdQSIw4jRqz7L6QIra6GiGP90zHKa/PG3Afin
+      ExaTOXEUE0cx45MhKo7p/vN4/be0o3f8VoT49d7qQtjmTwWD2Qorl8HvjbHdPMvpknLzgMV4
+      jopjbOfsaq2KFcvJnJybx3byqCimeOiez7sS4hfamyvBQpwHmQUSqSYBEKkmARCpJgEQqSYB
+      EKkmARCpJgEQqSYBEKkmARCpJgEQqSYBEKkmARCpJgEQqSYBEKkmARCpJgEQqSYBEKkmARCp
+      JgEQqSYBEKkmARCpJgEQqSYBEKkmARCpJgEQqSYBEKkmARCpJgEQqSYBEKkmARCpJgEQqSYB
+      EKkmARCpJgEQqSYBEKkmARCpJgEQqSYBEKkmARCpJgEQqSYBEKkmARCpJgEQqSYBEKkmARCp
+      JgEQqSYBEKkmARCpJgEQqSYBEKkmARCpJgEQqSYBEKkmARCpJgEQqSYBEKkmARCpJgEQqSYB
+      EKkmARCpJgEQqSYBEKkmARCpJgEQqSYBEKkmARCpJgEQqSYBEKkmARCpJgEQqSYBEKkmARCp
+      JgEQqSYBEKkmARCpJgEQqSYBEKkmARCpJgEQqZa57AZcV1rrN39w9vT1F974wc5yb6zitQV3
+      nsZxhNYq+bHSqDg6ey0Kt8+VUmevaU0cnS2n4mjbZq0U8c46VBSh1/+gimO0Uq+vX2/aEe6s
+      46faEaPjePt9tLOO19qhFWpnuaS9O+3Q6o3XfmAdcYxSP7ZciKHXS8ZxjGVZXEVaa/zhKeFq
+      lWw8pdaPGLWzkeIw2cjJxtbrHR6/tiGTZTQqVtt1bb+ud1gcRUkHWW9I/dp6Xl9GqWQD7/7+
+      r35/66/Gj73wAy/uvmRZGQwjWcAwTcyd/WhlsttfNndfMwws62z8MzMZDMNcv2RgZd54bbMO
+      K4NhnhUOyfo3z8/aAWBld16zsmCctcPYaWNmZx1vtuO192JlztZhWdvlvt9Ga2d7WJib9hrr
+      duz8zrkfAbTWoDWGaX7/OUnKTcNEk4w8hmGAYby2IQGe/s9/spiOkzdnGhhG8sZ2d/hmZ1vZ
+      DGBsd7hhmJjrnZ0rFJM3b1qY1vr3zWTHmeudvtmp1npnGNv1GNv1WJkshrHZwNb3Op6x22Pf
+      7Nk77814c4HXnr7589dX9OY2Er/euR8Bhp1XTHodmh9+RLhacPLsKTfvPuDk639w6+G/8M3j
+      v9O68wmz0YBguSCXL2AXHVZzn7xbYjX3qdz44J23Swi4gJPg1cyn8t4HrBYzMAzcwyonz54S
+      rpYopXAOKwzb37GYjtEqJgyWdL/5CjAYHL8kXC7Pu4kixc69BDpsvUfv2+ccNW+ymE6wrAwf
+      /vFfmU2GWJkMKoooVZvEUZiUGKZJwSmxnE05bL5/Vr8JcQ62JVAURdLZROq8dgS4yidVV3mW
+      CqR9v9VltW8bANM0r3QApH2/jbTvR/7d3QZsLhhsvn7vYs4FU0qhdTKfb66nTjffXwX71r7d
+      76+CH2ofXGy/2x4BZrMZT58+JZPJoJSi1WrRbre5efMmT5484a9//euFHqJGoxFffPEFxWKR
+      5XLJ7du3OT4+JgxDgiDgL3/5y4W15Yf80PY6OTnBtm2CIODhw4eXWnIEQcCXX35JtL7y6Xke
+      4/GYKIqwLIv79++Tz+cvrX1KKZ49e8Z4PMY0TTzPIwxDlFLM53P+/Oc/X0g7tgEwDAPbtikU
+      ChSLRWzbxnVdDg4OuHHjxoXvTK01R0dHaK0pFouUSiUGgwFKKbI7Vxgvy2Z7FYtFisUi2WwW
+      z/NwXZcvvvgCpdSlBsAwDJRSVCoVXNfl1atX5HI5HMehVCoRBMGlBgBgPp/z/vvvo5RiNBoR
+      BAH379/nxYsXF9aGbQkUBAG2bVOpVPB9H9M0iaKI6XTKrVu3LqxBG5tZqVqthmEYTKdT4jim
+      UqlQrVYvvD1vCsMQ27Y5OjpiOp2SyWSIogjDMLh9+/alhzQMQ/L5PJ7n0e12abVa2LZNtVrF
+      9308z7vU9mmtyeVyZDIZfN+n0Whg2zaDwYAoipjP5xfSju00qBBp9P/p/GkL5SgykgAAAABJ
+      RU5ErkJggg==
+    </thumbnail>
+  </thumbnails>
+</workbook>
