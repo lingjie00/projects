@@ -1,0 +1,169 @@
+---
+title: "Singapore's Travel Bubble"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+# Context
+I was reading the Economist's article "Could travel bubbles offer a route to economic recovery?" and get curious which country will be beneficial for Singapore to form travel bubbles with.
+The article describes a potential selective travel agreement during COVID-19 pandemic. On the one hand, allowing travel between trading partners enable business activities to continue. On the other, increasing travel also increases the possibility of imported cases. One possible solution will be selective in countries to open borders with.
+The article also says that it is more likely for countries to open borders with countries who are handling the COVID-19 situation equally well, if not better.
+I tried to get a sense of Singapore's potential travel partners by comparing the active COVID-19 cases and trade volumes between Singapore and Singapore's trading partners. It seems like most of our potential partners will be in Asia.
+
+Link to article: https://www.economist.com/finance-and-economics/2020/05/14/could-travel-bubbles-offer-a-route-to-economic-recovery
+
+# Data
+```{r message=FALSE,warning=FALSE, echo=FALSE}
+source("code.R")
+```
+
+## Trade Data
+Goods import and export data taken from Singapore's Department of Statistics, Singapore
+Data filtered to only 2019 data
+```{r}
+#Import
+str(goods_import)
+#Top 5 countries Singapore import from
+knitr::kable(head(goods_import,5))
+```
+
+\pagebreak
+
+```{r}
+#Export
+str(goods_export)
+#Top 5 countries Singapore export to
+knitr::kable(head(goods_export,5))
+```
+
+
+## COVID-19 Data
+Covid figure taken from Jogns Hopkins University on 17 May 2020
+```{r}
+#COVID-19
+str(covid_data)
+#Top 10 countries by active case count
+knitr::kable(head(covid_data,10))
+```
+
+\pagebreak
+
+```{r}
+#Singapore's ranking
+knitr::kable(covid_data %>% filter(Country=="Singapore"))
+```
+
+
+## Trade Data & COVID-19 Data
+Singapore's trade data is joined with COVID-19 data after some data preprocessing
+A new rank is computed by comparing Singapore's active cases to other trading partners
+```{r}
+#Trade & COVID-19
+str(trade_covid_data)
+
+#Singapore ranking compared to trading partners
+knitr::kable(data.frame(covid_data %>% filter(Country=="Singapore") %>% select(-Rank), Rank=sg_rank))
+
+#Top 10 countries by active case count, when compared to Singapore
+knitr::kable(head(trade_covid_data,10) %>%
+               select(Country, Net_trade, Confirmed, Deaths, Recovered, Active, Rank_covid))
+```
+
+## Data issue
+I maintained Singapore's naming convention for the country names. However, there are a few issues.
+1. Countries with no COVID-19 figures
+```{r}
+#Countries with no COVID-19 figures
+knitr::kable(missing_country)
+```
+
+2. Potential wrong COVID-19 calculation
+    + Singapore clusters countries in Oceania and Africa, there are a few countries in these region with no COVID-19 figures
+```{r}
+#Countries in Oceania with no COVID-19 figures
+knitr::kable(data.frame(Country=missing_oceania_countries))
+
+#Countries in Africa with no COVID-19 figures
+knitr::kable(data.frame(Country=missing_african_countries))
+```
+
+\pagebreak
+
+3. Clustering issue
+    + As mentioned previously, Singapore clusters countries together. I referred to Singapore's Ministry of Foreign Affairs website for definition of Oceania countries
+    + Oceania countries therefore contains Australia and New Zealand
+    + Link: https://www.mfa.gov.sg/SINGAPORES-FOREIGN-POLICY/Countries-and-Regions/Oceania
+    
+4. Countries in region
+    + A branch out issue with clustering is the list of countries in the specific region
+    + I used wikipedia's list of countries in Oceania and Africa
+    + African countries: https://en.wikipedia.org/wiki/List_of_African_countries_by_population
+    + Oceanian countries: https://en.wikipedia.org/wiki/List_of_Oceanian_countries_by_population
+
+\pagebreak
+
+# Analyse
+I classify all countries with lesser active COVID-19 cases than Singapore as potential partners
+I used Tableau to create the maps
+
+    + The numbers represent active COVID-19 cases.
+    + The colours represent net trade, trade deficit (red) and trade surplus (blue)
+
+## Worldwide
+
+### Potential Partners
+The main potential partners are concentrated in Asia and majority of them provides trade surplus to Singapore
+![](/Users/lingjie/Desktop/git/Singapore_bubble/output/Potential_Partner.png)
+
+\pagebreak
+
+### Not Potential Partners
+Majority of countries that Singapore might not be able to partner with are in America, and most of these countries are net importers to Singapore
+
+![](/Users/lingjie/Desktop/git/Singapore_bubble/output/Not_Potential_Partner.png)
+
+\pagebreak
+
+## Asia
+![](/Users/lingjie/Desktop/git/Singapore_bubble/output/Potential_Partner_Asia.png)
+
+\pagebreak
+
+## Southeast Asia
+![](/Users/lingjie/Desktop/git/Singapore_bubble/output/Potential_Partner_SEAsia.png)
+
+\pagebreak
+
+# Limitations
+There are other factors beside trade figures and active COVID-19 numbers which may affect the travel bubble.
+One important factor is the relationships between countries. For example, Singapore and New Zealand signed a Declaration on Trade in Essential Goods for Combating the Covid-19 Pandemic on 15 April.
+
+Link: https://www.straitstimes.com/opinion/spore-and-new-zealand-standing-together-amid-covid-19-challenges
+
+# Conclusion
+If we look purely at the trade figures and active COVID-19 numbers, it seems like Singapore will be willing to partner with almost all the close neighbours in Asia and Oceania.
+However, this does not mean that Singapore's trading partner will want to form travel bubbles with Singapore. Especially considering many of the close neighbours now have lesser active cases than Singapore.
+I hope we will be able to control the situation and lower the number of active cases in order for us to resume trading and travelling to other countries.
+
+\pagebreak
+
+## Full data
+```{r}
+#full table
+knitr::kable(trade_covid_data %>% 
+               mutate(`Export(rank)`=Rank_export, `Import(rank)`=Rank_import, 
+                      `Net trade(rank)`=Rank_net_trade, `Active cases`=Active, 
+                      `Partner?`=Potential) %>%
+               select(Country, `Export(rank)`, `Import(rank)`, `Net trade(rank)`, 
+                      `Active cases`, `Partner?`), 
+             longtable=TRUE)
+```
+
+
+
+
+
+
+
+
