@@ -29,3 +29,4 @@ documentation.
 | Order Brushing | Detect abnormal users in Shopee platform based on transaction data provided by Shopee | Data Analysis | Python
 | Spam call Investigation | Predict spam calls based on historical call data provided by China mobile | Data Science | Python
 | Titanic | Hello-world of data science, predicting survival in Titanic crash | Data Science | Python
+| Wordle solver | solving wordle with the help of nltk and some logic guess | Software | Python
